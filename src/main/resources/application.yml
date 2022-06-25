@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+    com.talendig.springboottalendig.basicrest: debug
+
+#Perfiles
+spring:
+  profiles:
+    include: mysql, mongo
+  active: mysql
+
+jsonplaceholder.server: "https://jsonplaceholder.typicode.com"
+
+#Documentacion Swagger
+springdoc:
+  swagger-ui:
+    use-root-path: true
+    disable-swagger-default-url: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, beans, mappings, metrics, env
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    beans:
+      enabled: true
+    info:
+      enabled: true
+    mappings:
+      enabled: true
+    metrics:
+      enabled: true
+    env:
+      enabled: true

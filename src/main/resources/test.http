@@ -1,0 +1,11 @@
+GET http://localhost:8080/demo/thirdpartyapi/jsonplaceholder/todos
+
+#
+
+POST http://localhost:8080/demo/thirdpartyapi/jsonplaceholder/todos
+{
+    "userId": 1,
+    "id": 101,
+    "title": "Titulo Bootcamp Talendig",
+    "body": "Bootcamp Talendig"
+}
